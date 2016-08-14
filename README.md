@@ -25,4 +25,5 @@
   - Update result to database
 
 ## Reference Document
-1. http://www.biodex.com/sites/default/files/840101man_07015reva.pdf
+1. Reference GUI for JRD: http://www.biodex.com/sites/default/files/840101man_07015reva.pdf
+2. how to edit Readme file: https://help.github.com/articles/basic-writing-and-formatting-syntax/
