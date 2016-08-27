@@ -1,14 +1,17 @@
-#include "jrdgui.h"
 #include <QApplication>
 #include "game.h"
 
+
+
 Game * game;
+// Set valid db path before first run
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    JrdGui w;
-    w.show();
+    game = new Game();
+    game->show();
 
     return a.exec();
 }

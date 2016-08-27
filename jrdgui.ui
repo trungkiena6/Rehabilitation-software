@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>515</width>
-    <height>456</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,11 +27,39 @@
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="documentMode">
        <bool>false</bool>
       </property>
+      <widget class="QWidget" name="tabGame">
+       <attribute name="title">
+        <string>Game</string>
+       </attribute>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>491</width>
+          <height>341</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="buttonStart">
+        <property name="geometry">
+         <rect>
+          <x>828</x>
+          <y>0</y>
+          <width>141</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Start game</string>
+        </property>
+       </widget>
+      </widget>
       <widget class="QWidget" name="tabPatient">
        <attribute name="title">
         <string>Patient</string>
@@ -45,11 +73,6 @@
       <widget class="QWidget" name="tabSetROM">
        <attribute name="title">
         <string>SetROM</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tabGame">
-       <attribute name="title">
-        <string>Game</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="tabReport">
@@ -66,7 +89,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>515</width>
+     <width>1000</width>
      <height>25</height>
     </rect>
    </property>

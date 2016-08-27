@@ -2,6 +2,7 @@
 #define JRDGUI_H
 
 #include <QMainWindow>
+#include "game.h"
 
 namespace Ui {
 class JrdGui;
@@ -14,7 +15,6 @@ class JrdGui : public QMainWindow
 public:
     explicit JrdGui(QWidget *parent = 0);
     ~JrdGui();
-
 private:
     Ui::JrdGui *ui;
 };
