@@ -33,7 +33,7 @@ void Friend::move()
     QList<QGraphicsItem *> collide_item = collidingItems();
     for(int i=0, n= collide_item.size(); i<n;i++){
 
-        if(typeid(* collide_item[i]) == typeid(MyRect)){
+        if(typeid(* collide_item[i]) == typeid(Player)){
             //Decrease the health
             game->score->increase();
             // Remove enemy

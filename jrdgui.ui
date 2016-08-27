@@ -46,18 +46,31 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="buttonStart">
+       <widget class="QGroupBox" name="groupGameControl">
         <property name="geometry">
          <rect>
-          <x>828</x>
+          <x>830</x>
           <y>0</y>
           <width>141</width>
-          <height>61</height>
+          <height>221</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Start game</string>
+        <property name="title">
+         <string>Game Control</string>
         </property>
+        <widget class="QPushButton" name="buttonStart">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>141</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Start game</string>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tabPatient">

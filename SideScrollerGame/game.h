@@ -1,6 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-#include "myrect.h"
+#include "player.h"
 #include <QGraphicsView>
 #include "score.h"
 #include "health.h"
@@ -14,7 +14,7 @@ public:
     QGraphicsScene * scene;
     QGraphicsScene * scene2;
     QGraphicsScene * sceneStart;
-    MyRect * player;
+    Player * player;
     Score *score;
     Health * health;
     int StateCollide;
@@ -25,7 +25,7 @@ public:
 
 public slots:
     void gameStart();
-
+    void gameOver();
 private:
 };
 

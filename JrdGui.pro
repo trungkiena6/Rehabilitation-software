@@ -17,24 +17,24 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     jrdgui.cpp \
-    SideScrollerGame/bullet.cpp \
     SideScrollerGame/enemy.cpp \
     SideScrollerGame/friend.cpp \
     SideScrollerGame/game.cpp \
     SideScrollerGame/health.cpp \
-    SideScrollerGame/myrect.cpp \
     SideScrollerGame/myserial.cpp \
-    SideScrollerGame/score.cpp
+    SideScrollerGame/score.cpp \
+    SideScrollerGame/dialog.cpp \
+    SideScrollerGame/player.cpp
 
 HEADERS  += jrdgui.h \
-    SideScrollerGame/bullet.h \
     SideScrollerGame/enemy.h \
     SideScrollerGame/friend.h \
     SideScrollerGame/game.h \
     SideScrollerGame/health.h \
-    SideScrollerGame/myrect.h \
     SideScrollerGame/myserial.h \
-    SideScrollerGame/score.h
+    SideScrollerGame/score.h \
+    SideScrollerGame/dialog.h \
+    SideScrollerGame/player.h
 
 FORMS    += jrdgui.ui
 

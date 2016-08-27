@@ -10,8 +10,12 @@ JrdGui::JrdGui(QWidget *parent) :
     ui(new Ui::JrdGui)
 {
     ui->setupUi(this);
+    /*************
+    *   Tab Game
+    *************/
     game = new Game();
     game->setParent(ui->tabGame);
+    //button
     QObject::connect(ui->buttonStart,SIGNAL(clicked(bool)),game,SLOT(gameStart()));
 }
 

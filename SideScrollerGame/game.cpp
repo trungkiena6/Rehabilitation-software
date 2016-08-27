@@ -1,5 +1,5 @@
 #include "game.h"
-#include "myrect.h"
+#include "player.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QTimer>
@@ -9,6 +9,8 @@
 #include <QImage>
 #include <QPushButton>
 #include <QDialog>
+#include "dialog.h"
+#include <QLabel>
 
 /*
     Add scene:  add player into it
@@ -35,7 +37,7 @@ Game::Game()
     *   Scene game
     **************/
     // add player item + player to scene
-    player = new MyRect();
+    player = new Player();
     scene->addItem(player);
     // make player focusable 
     player->setFlags(QGraphicsItem::ItemIsFocusable);
@@ -59,7 +61,7 @@ Game::Game()
 
     // Setting timer for GameOver
     timerOver = new QTimer();
-    QObject::connect(timerOver,SIGNAL(timeout()),player,SLOT(gameOver()));
+    QObject::connect(timerOver,SIGNAL(timeout()),this,SLOT(gameOver()));
 
     //add Arduino Serialport
     arduino = new MySerial();
@@ -67,9 +69,6 @@ Game::Game()
     QObject::connect(arduino,SIGNAL(readyRead()),arduino,SLOT(readSerial()));
     timerTest = new QTimer();
     QObject::connect(timerTest,SIGNAL(timeout()),player,SLOT(test()));
-
-
-
 
     // play back ground music
 //    QMediaPlayer * music = new QMediaPlayer();
@@ -84,4 +83,19 @@ void Game::gameStart()
     timerEnemy->start(5000);
     timerOver->start(1000*20);
     timerTest->start(50);
+}
+
+void Game::gameOver()
+{
+    timerEnemy->stop();
+    setScene(scene2);
+    timerOver->stop();
+    timerTest->stop();
+
+    Dialog * DialogOver = new Dialog();
+    QLabel * labelOver = new QLabel();
+    DialogOver->move(x()+width()/3,y()+height()/3);
+    labelOver->setText("Congratulation");
+    labelOver->setParent(DialogOver);
+    DialogOver->show();
 }
