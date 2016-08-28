@@ -13,7 +13,7 @@ extern Game * game;
 
 Player::Player(QGraphicsItem *parent):QGraphicsPixmapItem(parent){
     // draw a player
-    setPixmap(QPixmap(":/image/player.png"));
+    setPixmap(QPixmap(":/image/player1.png"));
 }
 
 void Player::keyPressEvent(QKeyEvent * event){
@@ -47,7 +47,7 @@ void Player::spawn()
 
 void Player::test()
 {
-    int y_player = game->arduino->serialValue.toInt();
-    y_player = y_player*600/1000;
+    int y_player = game->myserial->serialValue;
+    y_player = 600-y_player*600/1000;
     game->player->setPos(game->player->x(),y_player);
 }

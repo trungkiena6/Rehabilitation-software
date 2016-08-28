@@ -21,20 +21,24 @@ SOURCES += main.cpp\
     SideScrollerGame/friend.cpp \
     SideScrollerGame/game.cpp \
     SideScrollerGame/health.cpp \
-    SideScrollerGame/myserial.cpp \
     SideScrollerGame/score.cpp \
     SideScrollerGame/dialog.cpp \
-    SideScrollerGame/player.cpp
+    SideScrollerGame/player.cpp \
+    Report/graph.cpp \
+    Report/table.cpp \
+    SideScrollerGame/serialtest2.cpp
 
 HEADERS  += jrdgui.h \
     SideScrollerGame/enemy.h \
     SideScrollerGame/friend.h \
     SideScrollerGame/game.h \
     SideScrollerGame/health.h \
-    SideScrollerGame/myserial.h \
     SideScrollerGame/score.h \
     SideScrollerGame/dialog.h \
-    SideScrollerGame/player.h
+    SideScrollerGame/player.h \
+    Report/graph.h \
+    Report/table.h \
+    SideScrollerGame/serialtest2.h
 
 FORMS    += jrdgui.ui
 

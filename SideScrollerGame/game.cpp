@@ -11,6 +11,8 @@
 #include <QDialog>
 #include "dialog.h"
 #include <QLabel>
+#include "serialtest2.h"
+
 
 /*
     Add scene:  add player into it
@@ -64,11 +66,14 @@ Game::Game()
     QObject::connect(timerOver,SIGNAL(timeout()),this,SLOT(gameOver()));
 
     //add Arduino Serialport
-    arduino = new MySerial();
-    qDebug() <<"serial port: "<< arduino->portName();
-    QObject::connect(arduino,SIGNAL(readyRead()),arduino,SLOT(readSerial()));
+//    arduino = new MySerial();
+//    qDebug() <<"serial port: "<< arduino->portName();
+//    QObject::connect(arduino,SIGNAL(readyRead()),arduino,SLOT(readSerial()));
     timerTest = new QTimer();
     QObject::connect(timerTest,SIGNAL(timeout()),player,SLOT(test()));
+
+    // add Serial test 2
+    myserial = new SerialTest2();
 
     // play back ground music
 //    QMediaPlayer * music = new QMediaPlayer();
@@ -81,7 +86,7 @@ void Game::gameStart()
 {
     setScene(scene);
     timerEnemy->start(5000);
-    timerOver->start(1000*20);
+    timerOver->start(1000*60);
     timerTest->start(50);
 }
 
@@ -98,4 +103,34 @@ void Game::gameOver()
     labelOver->setText("Congratulation");
     labelOver->setParent(DialogOver);
     DialogOver->show();
+}
+
+void Game::mybuttonClick1()
+{
+    myserial->sendCommand(1);
+}
+
+void Game::mybuttonClick2()
+{
+    myserial->sendCommand(2);
+}
+
+void Game::mybuttonClick3()
+{
+    myserial->sendCommand(3);
+}
+
+void Game::mybuttonClick4()
+{
+    myserial->sendCommand(4);
+}
+
+void Game::mybuttonClick5()
+{
+myserial->sendCommand(5);
+}
+
+void Game::mybuttonClick6()
+{
+myserial->sendCommand(6);
 }

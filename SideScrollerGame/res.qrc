@@ -8,5 +8,6 @@
         <file>bullet.png</file>
         <file>images.jpg</file>
         <file>bg.png</file>
+        <file>player1.png</file>
     </qresource>
 </RCC>
