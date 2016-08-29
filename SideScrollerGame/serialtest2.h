@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QtSerialPort/QtSerialPort>
+#include <QFile>
 
 #define ENABLE_PLAYER 1
 #define DISABLE_PLAYER 2

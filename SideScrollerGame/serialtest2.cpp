@@ -1,5 +1,6 @@
 #include "serialtest2.h"
 #include <QtSerialPort/QtSerialPort>
+#include <QFile>
 
 QSerialPort *serial;
 //QChart *m_chart;
@@ -13,26 +14,26 @@ int count=0;
 SerialTest2::SerialTest2()
 {
      setupSerialPort();
-//     setupSaveFile();
-//     file->open(QFile::ReadWrite);
+     setupSaveFile();
+     file->open(QFile::ReadWrite);
 }
 
 SerialTest2::~SerialTest2()
 {
     serial->close();
-//    file->write("end");
-//    file->close();
+    file->write("end");
+    file->close();
 }
 
 
 void SerialTest2::save_file(const QPoint &newPoint)
 {
     QTextStream in_1(file);
-    //    QDir::setCurrent("/home/nhattan/Qt_project/Serial_test_2/");
-    //    in<<newPoint.x() <<newPoint.y();
+    QDir::setCurrent("/home/hung303mc/JRDProject/JrdGui");
+        //in<<newPoint.x() <<newPoint.y();
     QString str_data = QString::number(newPoint.x()) + " " + QString::number(newPoint.y()) + '\n';
     in_1<< str_data;
-    //    file->write(str_data.);
+    //file->write(str_data);
 }
 
 void SerialTest2::m_serial_test()
